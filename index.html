@@ -153,6 +153,38 @@
   </div>
 </section>
 
+
+<!-- Video Play -->
+<section id="video-play">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col">
+        <div class="container p-5">
+          <a href="#" class="video" data-video="https://www.youtube.com/embed/HnwsG9a5riA" data-toggle="modal" data-target="#videoModal">
+            <i class="fas fa-play fa-3x"></i>
+          </a>
+          <h1>See What We Do</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -168,6 +200,19 @@
     $('.carousel').carousel({
       interval: 4000,
       pause: "hover"
+    })
+
+    // configuring the video player
+    $(function() {
+      $(".video").click(function(){
+        let modal = $(this).data("target"),
+            videoSRC = $(this).attr("data-video"),
+            videoSRCCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(modal + ' iframe').attr('src', videoSRCCauto);
+        $(modal + ' button.close').click(function(){
+          $(modal + " iframe").attr('src', videoSRC);
+        });
+      })
     })
   </script>
 </body>
