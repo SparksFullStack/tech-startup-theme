@@ -18,7 +18,7 @@
   <nav class='navbar navbar-expand-sm navbar-dark bg-dark'>
     <div class='container'>
         <a href='index.html' class='navbar-brand'>Golzzom</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="navbarCollapse">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class='navbar-toggler-icon'></span>
         </button>
 
@@ -48,9 +48,9 @@
  <section id="showcase">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-side-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-side-to="1"></li>
-          <li data-target="#myCarousel" data-side-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
 
       <div class="carousel-inner">
@@ -59,7 +59,7 @@
                   <div class="carousel-caption d-none d-sm-block text-right mb-5">
                       <h1 class="display-3">Heading One</h1>
                       <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt accusantium fuga tempora laboriosam inventore officia ex! Exercitationem ea debitis corrupti.</p>
-                      <a href="#" className="btn btn-danger btn-lg">Sign Up Now</a>
+                      <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
                   </div>
               </div>
           </div>
@@ -76,7 +76,7 @@
 
           <div class="carousel-item carousel-image-3">
               <div class="container">
-                  <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                  <div class="carousel-caption d-none d-sm-block text-left mb-5">
                       <h1 class="display-3">Heading Three</h1>
                       <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt accusantium fuga tempora laboriosam inventore officia ex! Exercitationem ea debitis corrupti.</p>
                       <a href="#" class="btn btn-success btn-lg">Get In Touch</a>
@@ -84,6 +84,14 @@
               </div>
           </div>
       </div>
+
+      <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+
+      <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
   </div>
 </section>
 
