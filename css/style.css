@@ -100,3 +100,8 @@ body {
 .accordion--border {
     border: 1px solid #fff;
 }
+
+#main-footer {
+    background: #000;
+    color: #fff;
+}
